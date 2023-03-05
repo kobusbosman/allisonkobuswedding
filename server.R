@@ -1,26 +1,41 @@
 server <- function(input, output, session) {
-  renderSurvey()
+
+  r_global <- reactiveValues()
+  
+  temp_dir <- tempdir()
+  
+  googledrive::drive_download("allisonkobusguests", path = glue::glue(temp_dir, "/allisonkobusguests.csv"), overwrite = TRUE) # if you want to let your guests writte their name
+  data_guests <- read_csv(glue::glue(temp_dir, "/allisonkobusguests.csv"), 
+                          locale = locale(decimal_mark = ","),
+                          col_types = cols(.default = col_character()))
+  r_global$data_guests <- data_guests
+  
+  output$nameselection <- renderUI({
+    selectInput(
+      inputId = "name",
+      label = "Please select your name",
+      choices = r_global$data_guests$name
+    )
+  })
+  output$rsvp <- renderUI({
+    selectInput(
+      inputId = "rsvp",
+      label = "Are you attending the wedding?",
+      choices = c("Yes", "No")
+    )
+  })
+  output$remarks <- renderUI({
+    textAreaInput(
+      inputId = "remarks",
+      label = "Do you have additional remarks?"
+    )
+  })
   
   observeEvent(input$submit, {
-    response_data <- getSurveyData()
-    
-    # Read our sheet
-    values <- read_sheet(ss = sheet_id, sheet = "main")
-    
-    # Check to see if our sheet has any existing data.
-    # If not, let's write to it and set up column names. 
-    # Otherwise, let's append to it.
-    
-    if (nrow(values) == 0) {
-      sheet_write(data = response_data,
-                  ss = sheet_id,
-                  sheet = "main")
-    } else {
-      sheet_append(data = response_data,
-                   ss = sheet_id,
-                   sheet = "main")
-    }
-    
+    r_global$data_guests <- r_global$data_guests %>% rows_update(tibble(name = input$name, rsvp = input$rsvp, remarks = input$remarks))
+    temp_dir <- tempdir()
+    readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
+    googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
   })
   
 }
