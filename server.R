@@ -1,4 +1,6 @@
 server <- function(input, output, session) {
+  
+  shinyjs::addClass(id = "menus", class = "display:inline-block")
 
   r_global <- reactiveValues()
   
@@ -37,5 +39,4 @@ server <- function(input, output, session) {
     readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
   })
-  
 }
