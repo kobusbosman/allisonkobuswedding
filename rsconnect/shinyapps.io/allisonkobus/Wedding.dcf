@@ -1,13 +1,13 @@
 name: Wedding
-title: Wedding
+title: allisonkobuswedding
 username:
 account: allisonkobus
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 8477493
-bundleId: 6917403
+bundleId: 6917495
 url: https://allisonkobuswedding.shinyapps.io/wedding/
-when: 1678010284.30771
-lastSyncTime: 1678010284.30775
+when: 1678013800.1535
+lastSyncTime: 1678013800.15354
 asMultiple: FALSE
 asStatic: FALSE
