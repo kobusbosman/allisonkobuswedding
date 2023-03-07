@@ -26,6 +26,12 @@ server <- function(input, output, session) {
       choices = c("Yes", "No")
     )
   })
+  output$song <- renderUI({
+    textAreaInput(
+      inputId = "song",
+      label = "Do you have a favorite song you would like to be played?"
+    )
+  })
   output$remarks <- renderUI({
     textAreaInput(
       inputId = "remarks",
@@ -34,7 +40,7 @@ server <- function(input, output, session) {
   })
   
   observeEvent(input$submit, {
-    r_global$data_guests <- r_global$data_guests %>% rows_update(tibble(name = input$name, rsvp = input$rsvp, remarks = input$remarks))
+    r_global$data_guests <- r_global$data_guests %>% rows_update(tibble(name = input$name, rsvp = input$rsvp, song = input$song, remarks = input$remarks))
     temp_dir <- tempdir()
     readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))

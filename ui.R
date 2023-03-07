@@ -164,11 +164,55 @@ ui <- fluidPage(
       ),
       tabPanel(
         title = "RSVP",
-        tagList(
-          uiOutput("nameselection"),
-          uiOutput("rsvp"),
-          uiOutput("remarks"),
-          actionButton(inputId = "submit", label = "Send to Allison & Kobus")
+        fluidPage(
+          fluidRow(
+            column(
+              12,
+              align = "center",
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  p("Thanks for letting us know if you're joining! Please fill out this form per individual:")
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  uiOutput("nameselection", style = "margin-top: 25px;")
+                 )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  uiOutput("rsvp", style = "margin-top: 25px;")
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  uiOutput("song", style = "margin-top: 25px;")
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  uiOutput("remarks", style = "margin-top: 25px;")
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  actionButton(inputId = "submit", label = "Send to Allison & Kobus", style = "margin-top: 25px; text-align: justify;")
+                )
+              )
+            )
+          )
         )
       ),
       tabPanel(
