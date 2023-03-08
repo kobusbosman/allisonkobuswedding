@@ -40,6 +40,12 @@ server <- function(input, output, session) {
   })
   
   observeEvent(input$submit, {
+    showModal(
+      modalDialog(
+        title = "Thanks for confirming!",
+        "Many thanks indeed!"
+      )
+    )
     r_global$data_guests <- r_global$data_guests %>% rows_update(tibble(name = input$name, rsvp = input$rsvp, song = input$song, remarks = input$remarks))
     temp_dir <- tempdir()
     readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
