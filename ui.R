@@ -17,36 +17,30 @@ ui <- fluidPage(
         title = "Home",
         fluidPage(
           fluidRow(
-            column(3),
             column(
-              2,
-              align = "right",
-              h1("Kobus Bosman")
-            ),
-            column(
-              2,
+              12,
               align = "center",
               fluidRow(
                 column(
-                  12,
-                  align = "center",
-                  h3("")
-                )
-              ),
-              fluidRow(
+                  5,
+                  align = "right",
+                  shiny::HTML("<h1>Kobus<br/>Bosman</h1>"),
+                  style = "margin-left:75px; margin-right:-75px;"
+                ),
                 column(
-                  12,
+                  2,
                   align = "center",
-                  h3("&")
-                )
+                  shiny::HTML("<h3><br/>&</h3>"),
+                  style = "margin-right:-75px"
+                ),
+                column(
+                  5,
+                  align = "left",
+                  shiny::HTML("<h1>Allison<br/>Crawford</h1>")
+                ),
+                column(2)
               )
-            ),
-            column(
-              2,
-              align = "left",
-              h1("Allison Crawford")
-            ),
-            column(3)
+            )
           ),
           fluidRow(
             column(
@@ -180,7 +174,14 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  uiOutput("nameselection", style = "margin-top: 25px;")
+                  shinycssloaders::withSpinner(
+                    uiOutput(
+                      "nameselection",
+                      style = "margin-top: 25px;"
+                    ),
+                    type = 8,
+                    color = "#4c774f"
+                  )
                  )
               ),
               fluidRow(
@@ -208,7 +209,7 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  actionButton(inputId = "submit", label = "Send to Allison & Kobus", style = "margin-top: 25px; text-align: justify;")
+                  actionButton(inputId = "submit", label = "Send to Allison & Kobus", style = "border-color: #4c774f; margin-top: 25px; text-align: justify; margin-bottom:50px")
                 )
               )
             )

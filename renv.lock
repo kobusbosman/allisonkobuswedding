@@ -408,6 +408,20 @@
       "Repository": "CRAN",
       "Hash": "c2eae3d8c670fa9dfa35a12066f4a1d5"
     },
+    "shinycssloaders": {
+      "Package": "shinycssloaders",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "f39bb3c44a9b496723ec7e86f9a771d8"
+    },
+    "shinyjs": {
+      "Package": "shinyjs",
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "802e4786b353a4bb27116957558548d5"
+    },
     "shinysurveys": {
       "Package": "shinysurveys",
       "Version": "0.2.0",
