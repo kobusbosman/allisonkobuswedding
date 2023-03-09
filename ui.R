@@ -154,7 +154,7 @@ ui <- fluidPage(
                     column(2),
                     column(
                       8,
-                      p("Cocktail Attire: Wear cocktail dresses, dressy jumpsuits, and jackets and slacks. The ceremony and reception will take place in one location. There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!", style = "margin-top: 25px; text-align: justify;"),
+                      p("Cocktail attire: Wear cocktail dresses, dressy jumpsuits, suits and jackets and slacks. The ceremony and reception will take place in one location. There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!", style = "margin-top: 25px; text-align: justify;"),
                     ),
                     column(2)
                   )
@@ -260,7 +260,7 @@ ui <- fluidPage(
                   icon("plane-arrival", "fa-3x", style = "margin-top: 25px"),
                   h1("Travel"),
                   h3("Washington Dulles International Airport (IAD)", style = "margin-top: 25px"),
-                  p("KLM has direct flights between Amsterdam and Washington every day and the venue is less than an hour by car from the airport", style = "margin-top: 25px")
+                  p("KLM has direct flights between Amsterdam and Washington every day and the venue is less than an hour by car from the airport.", style = "margin-top: 25px")
                 )
               ),
               fluidRow(
@@ -278,7 +278,7 @@ ui <- fluidPage(
         )
       ),
       tabPanel(
-        title = "Registry",
+        title = "Gifts",
         fluidPage(
           fluidRow(
             column(3),
@@ -296,12 +296,17 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  h1("American", style = "margin-top: 50px;"),
+                  h1("American", style = "margin-top: 25px;"),
                   fluidRow(
                     column(
-                      12,
+                      6,
                       img(src="qrcodezelle.jpg", align = "center", width = "150px"),
                       p("Zelle", style = "margin-top:5px")
+                    ),
+                    column(
+                      6,
+                      img(src="qrvenmo.jpg", align = "center", width = "150px"),
+                      p("Venmo", style = "margin-top:5px")
                     )
                   )
                 )
