@@ -91,18 +91,12 @@ ui <- fluidPage(
                 align = "center",
                 fluidRow(
                   column(
-                    12,
-                    align = "center",
-                    fluidRow(
-                      column(
-                        6,
-                        img(src = "ringfadesquare.jpg", align = "left", width = "75%", style = "margin-top:25px;")
-                      ),
-                      column(
-                        6,
-                        p("A lonely Allison boarded a plane by herself to visit her family in the US for Christmas. Little did she know, Kobus was making secret plans with her parents to join her a week later. He showed up at her sister Lauren's house on December 23rd and became the best Christmas miracle ever... or so she thought. The next day Kobus insisted on heading out in 15-degree weather (-10C) to hike up Sugarloaf Mountain. When they reached the top Kobus put on some music and asked Allison to dance. Once Taylor Swift said, \"I\'ve loved you three summers now, honey, but I want \'em all,\" Kobus knelt down and asked if Allison would marry him. When she gained her composure, Allison immediately said yes!", style = "margin-top: 25px; text-align: justify;")
-                      )
-                    )
+                    6,
+                    img(src = "ringfadesquare.jpg", align = "left", width = "75%", style = "margin-top:25px;")
+                  ),
+                  column(
+                    6,
+                    p("A lonely Allison boarded a plane by herself to visit her family in the US for Christmas. Little did she know, Kobus was making secret plans with her parents to join her a week later. He showed up at her sister Lauren's house on December 23rd and became the best Christmas miracle ever... or so she thought. The next day Kobus insisted on heading out in 15-degree weather (-10C) to hike up Sugarloaf Mountain. When they reached the top Kobus put on some music and asked Allison to dance. Once Taylor Swift said, \"I\'ve loved you three summers now, honey, but I want \'em all,\" Kobus knelt down and asked if Allison would marry him. When she gained her composure, Allison immediately said yes!", style = "margin-top: 25px; text-align: justify;")
                   )
                 )
               ),
