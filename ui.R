@@ -238,7 +238,7 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  actionButton(inputId = "submit", label = "Send to Allison & Kobus", style = "border-color: #4c774f; margin-top: 25px; text-align: justify; margin-bottom:50px")
+                  actionButton(inputId = "submit", label = "Send to Allison & Kobus", style = "border-color: #4c774f; margin-top: 25px; text-align: justify; margin-bottom:5px")
                 )
               )
             )
