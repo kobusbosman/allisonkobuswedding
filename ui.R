@@ -17,30 +17,30 @@ ui <- fluidPage(
         title = "Home",
         fluidPage(
           fluidRow(
+            column(3),
             column(
-              12,
+              6,
               align = "center",
               fluidRow(
                 column(
                   5,
-                  align = "right",
-                  shiny::HTML("<h1>Kobus<br/>Bosman</h1>"),
-                  style = "margin-left:75px; margin-right:-75px;"
+                  shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:right'>Kobus<br/>Bosman</h1>")
                 ),
                 column(
                   2,
                   align = "center",
-                  shiny::HTML("<h3><br/>&</h3>"),
-                  style = "margin-right:-75px"
+                  shiny::HTML("<h3 class = 'AndDesktop'><br/>&</h3>"),
+                  shiny::HTML("<h3 class = 'AndMobile'>&</h3>")
                 ),
                 column(
                   5,
                   align = "left",
-                  shiny::HTML("<h1>Allison<br/>Crawford</h1>")
+                  shiny::HTML("<h1 class='centerMobileOnly style = 'text-align:left'>Allison<br/>Crawford</h1>")
                 ),
                 column(2)
               )
-            )
+            ),
+            column(3)
           ),
           fluidRow(
             column(
@@ -55,9 +55,7 @@ ui <- fluidPage(
             h3("How we met", style = "margin-top: 75px"),
             h6("February 2, 2020", style = "margin-top: 25px"),
             fluidRow(
-              column(
-                3
-              ),
+              column(3),
               column(
                 6,
                 align = "center",
@@ -74,9 +72,7 @@ ui <- fluidPage(
                   )
                 )
               ),
-              column(
-                3
-              )
+              column(3)
             )
           ),
           fluidRow(
