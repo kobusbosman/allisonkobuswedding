@@ -100,7 +100,7 @@ ui <- fluidPage(
                       ),
                       column(
                         6,
-                        p("A lonely Allison boarded a plane by herself to visit her family in the US for Christmas. Little did she know, Kobus was making secret plans with her parents to join her a week later. He showed up at her sister Lauren's house on December 23rd and became the best Christmas miracle ever...or so she thought. The next day Kobus insisted on heading out in 15-degree weather (-10C) to hike up Sugarloaf Mountain. When they reached the top Kobus put on some music and asked Allison to dance. Once Taylor Swift said, \"I\'ve loved you three summers now, honey, but I want \'em all,\" Kobus knelt down and asked if Allison would marry him. When she gained her composure, Allison immediately said yes!", style = "margin-top: 25px; text-align: justify;")
+                        p("A lonely Allison boarded a plane by herself to visit her family in the US for Christmas. Little did she know, Kobus was making secret plans with her parents to join her a week later. He showed up at her sister Lauren's house on December 23rd and became the best Christmas miracle ever... or so she thought. The next day Kobus insisted on heading out in 15-degree weather (-10C) to hike up Sugarloaf Mountain. When they reached the top Kobus put on some music and asked Allison to dance. Once Taylor Swift said, \"I\'ve loved you three summers now, honey, but I want \'em all,\" Kobus knelt down and asked if Allison would marry him. When she gained her composure, Allison immediately said yes!", style = "margin-top: 25px; text-align: justify;")
                       )
                     )
                   )
@@ -135,7 +135,16 @@ ui <- fluidPage(
                   h1("Thursday, October 19, 2023", style = "margin-top: 75px"),
                   h3("Hiking", style = "margin-top: 25px"),
                   p("2.00 PM"),
-                  p("Join us in the scenic Blue Ridge mountains for a pre-wedding hike.", style = "margin-top: 25px")
+                  p("Bear Chase Brewing Company", style = "margin-top: 25px"),
+                  p(a(href = "https://www.google.com/maps/place/bear+chase+brewing+company/@39.1106956,-77.8458916,15z/data=!4m2!3m1!1s0x0:0x42b23afb12ce78d2?sa=X&ved=2ahUKEwiDt4-Zr8_9AhW7hP0HHeF_ACEQ_BJ6BQiNARAD", "33665 Bear Chase Ln, Bluemont, VA 20135", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
+                  fluidRow(
+                    column(3),
+                    column(
+                      6,
+                      p("Join us in the scenic Blue Ridge mountains for a pre-wedding hike.")
+                    ),
+                    column(3)
+                  )
                 )
               ),
               fluidRow(
@@ -146,10 +155,15 @@ ui <- fluidPage(
                   h3("Wedding", style = "margin-top: 25px"),
                   p("3.00 PM - 11.00 PM"),
                   p("Raven Rocks Farmhouse", style = "margin-top: 25px"),
-                  p("17345 Raven Rocks Rd, Bluemont, VA 20135"),
-                  p("Cocktail Attire: Wear cocktail dresses, dressy jumpsuits, and jackets and slacks. Mooi!", style = "margin-top: 25px"),
-                  p("The ceremony and reception will take place in one location. Handig!"),
-                  p("There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!")
+                  p(a(href = "https://www.google.com/maps?q=17345+Raven+Rocks+Rd,+Bluemont,+VA+20135&rlz=1C1GCEA_enNL949NL949&um=1&ie=UTF-8&sa=X&ved=2ahUKEwj159Dzr8_9AhVIgP0HHZ47DfwQ_AUoAXoECAEQAw", "17345 Raven Rocks Rd, Bluemont, VA 20135", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
+                  fluidRow(
+                    column(3),
+                    column(
+                      6,
+                      p("Cocktail Attire: Wear cocktail dresses, dressy jumpsuits, and jackets and slacks. The ceremony and reception will take place in one location. There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!", style = "margin-top: 25px; text-align: justify;"),
+                    ),
+                    column(3)
+                  )
                 )
               ),
               fluidRow(
@@ -160,8 +174,16 @@ ui <- fluidPage(
                   h3("Beer Festival", style = "margin-top: 25px"),
                   p("11.00 AM - 4.00 PM"),
                   p("Bear Chase Brewing Company", style = "margin-top: 25px"),
-                  p("33665 Bear Chase Ln, Bluemont, VA 20135"),
-                  p("Keep the party going on Saturday at the 3rd annual Beer and Wine Festival at Bear Chase Brewing Company. Enjoy award-winning beer, wine, live music and food. Proost!", style = "margin-top: 25px"),
+                  p(a(href = "https://www.google.com/maps/place/bear+chase+brewing+company/@39.1106956,-77.8458916,15z/data=!4m2!3m1!1s0x0:0x42b23afb12ce78d2?sa=X&ved=2ahUKEwiDt4-Zr8_9AhW7hP0HHeF_ACEQ_BJ6BQiNARAD", "33665 Bear Chase Ln, Bluemont, VA 20135", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
+                  fluidRow(
+                    column(3),
+                    column(
+                      6,
+                      align = "center",
+                      p("Keep the party going on Saturday at the 3rd annual Beer and Wine Festival at Bear Chase Brewing Company. Enjoy award-winning beer, wine, live music and food. Proost!", style = "margin-top: 25px; text-align: justify;"),
+                    ),
+                    column(3)
+                  )
                 )
               )
             ),
@@ -309,7 +331,7 @@ ui <- fluidPage(
                   p("11.00 AM - 4.00 PM"),
                   p("Bear Chase Brewing Company", style = "margin-top: 25px"),
                   p("33665 Bear Chase Ln, Bluemont, VA 20135"),
-                  p("Keep the party going on Saturday at the 3rd annual Beer and Wine Festival at Bear Chase Brewing Company. Enjoy award-winning beer, wine, live music and food. Proost!", style = "margin-top: 25px"),
+                  p("Keep the party going on Saturday at the 3rd annual Beer and Wine Festival at Bear Chase Brewing Company. Enjoy award-winning beer, wine, live music and food. Proost!", style = "margin-top: 25px; text-align: justify;"),
                 )
               )
             ),
