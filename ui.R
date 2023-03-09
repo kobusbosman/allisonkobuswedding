@@ -296,36 +296,28 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  h1("Thursday, October 19, 2023", style = "margin-top: 75px"),
-                  h3("Hiking", style = "margin-top: 25px"),
-                  p("2.00 PM"),
-                  p("Join us in the scenic Blue Ridge mountains for a pre-wedding hike.", style = "margin-top: 25px")
+                  h1("American", style = "margin-top: 50px;"),
+                  fluidRow(
+                    column(
+                      12,
+                      img(src="qrcodezelle.jpg", align = "center", width = "150px"),
+                      p("Zelle", style = "margin-top:5px")
+                    )
+                  )
                 )
               ),
               fluidRow(
                 column(
                   12,
                   align = "center",
-                  h1("Friday, October 20, 2023", style = "margin-top: 75px"),
-                  h3("Wedding", style = "margin-top: 25px"),
-                  p("3.00 PM - 11.00 PM"),
-                  p("Raven Rocks Farmhouse", style = "margin-top: 25px"),
-                  p("17345 Raven Rocks Rd, Bluemont, VA 20135"),
-                  p("Cocktail Attire: Wear cocktail dresses, dressy jumpsuits, and jackets and slacks. Mooi!", style = "margin-top: 25px"),
-                  p("The ceremony and reception will take place in one location. Handig!"),
-                  p("There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!")
-                )
-              ),
-              fluidRow(
-                column(
-                  12,
-                  align = "center",
-                  h1("Saturday, October 21, 2023", style = "margin-top: 75px"),
-                  h3("Beer Festival", style = "margin-top: 25px"),
-                  p("11.00 AM - 4.00 PM"),
-                  p("Bear Chase Brewing Company", style = "margin-top: 25px"),
-                  p("33665 Bear Chase Ln, Bluemont, VA 20135"),
-                  p("Keep the party going on Saturday at the 3rd annual Beer and Wine Festival at Bear Chase Brewing Company. Enjoy award-winning beer, wine, live music and food. Proost!", style = "margin-top: 25px; text-align: justify;"),
+                  h1("Dutch", style = "margin-top: 50px;"),
+                  fluidRow(
+                    column(
+                      12,
+                      img(src="qrcodeingmarch9.jpg", align = "center", style = "margin-bottom:10px", width = "150px"),
+                      p("ING betaalverzoek")
+                    )
+                  )
                 )
               )
             ),
