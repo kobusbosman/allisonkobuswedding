@@ -29,13 +29,15 @@ server <- function(input, output, session) {
   output$song <- renderUI({
     textAreaInput(
       inputId = "song",
-      label = "Do you have a favorite song you would like to be played?"
+      label = "Do you have a favorite song you would like to be played?",
+      height = "25px"
     )
   })
   output$remarks <- renderUI({
     textAreaInput(
       inputId = "remarks",
-      label = "Do you have additional remarks?"
+      label = "Do you have additional remarks?",
+      height = "25px"
     )
   })
   
