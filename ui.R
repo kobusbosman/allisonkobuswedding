@@ -132,12 +132,12 @@ ui <- fluidPage(
                   p("Bear Chase Brewing Company", style = "margin-top: 25px"),
                   p(a(href = "https://www.google.com/maps/place/bear+chase+brewing+company/@39.1106956,-77.8458916,15z/data=!4m2!3m1!1s0x0:0x42b23afb12ce78d2?sa=X&ved=2ahUKEwiDt4-Zr8_9AhW7hP0HHeF_ACEQ_BJ6BQiNARAD", "33665 Bear Chase Ln, Bluemont, VA 20135", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
                   fluidRow(
-                    column(3),
+                    column(2),
                     column(
-                      6,
+                      8,
                       p("Join us in the scenic Blue Ridge mountains for a pre-wedding hike.")
                     ),
-                    column(3)
+                    column(2)
                   )
                 )
               ),
@@ -151,12 +151,12 @@ ui <- fluidPage(
                   p("Raven Rocks Farmhouse", style = "margin-top: 25px"),
                   p(a(href = "https://www.google.com/maps?q=17345+Raven+Rocks+Rd,+Bluemont,+VA+20135&rlz=1C1GCEA_enNL949NL949&um=1&ie=UTF-8&sa=X&ved=2ahUKEwj159Dzr8_9AhVIgP0HHZ47DfwQ_AUoAXoECAEQAw", "17345 Raven Rocks Rd, Bluemont, VA 20135", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
                   fluidRow(
-                    column(3),
+                    column(2),
                     column(
-                      6,
+                      8,
                       p("Cocktail Attire: Wear cocktail dresses, dressy jumpsuits, and jackets and slacks. The ceremony and reception will take place in one location. There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!", style = "margin-top: 25px; text-align: justify;"),
                     ),
-                    column(3)
+                    column(2)
                   )
                 )
               ),
@@ -196,7 +196,7 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  p("Thanks for letting us know if you're joining! Please fill out this form per individual:")
+                  p("Thanks for letting us know if you're joining! Please fill out this form for every individual:")
                 )
               ),
               fluidRow(
