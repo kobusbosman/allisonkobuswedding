@@ -45,10 +45,18 @@ server <- function(input, output, session) {
     showModal(
       modalDialog(
         title = "Thanks for confirming!",
-        "Many thanks indeed!"
+        glue::glue("Your RSVP for {input$name} has been saved. Please fill in the form for other members of your family.")
       )
     )
-    r_global$data_guests <- r_global$data_guests %>% rows_update(tibble(name = input$name, rsvp = input$rsvp, song = input$song, remarks = input$remarks))
+    r_global$data_guests <- r_global$data_guests %>% rows_update(
+      tibble(
+        name = input$name,
+        rsvp = input$rsvp,
+        song = input$song,
+        remarks = input$remarks,
+        datetime = as.character(Sys.time())
+      )
+    )
     temp_dir <- tempdir()
     readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
