@@ -170,13 +170,13 @@ ui <- fluidPage(
                   p("Bear Chase Brewing Company", style = "margin-top: 25px"),
                   p(a(href = "https://www.google.com/maps/place/bear+chase+brewing+company/@39.1106956,-77.8458916,15z/data=!4m2!3m1!1s0x0:0x42b23afb12ce78d2?sa=X&ved=2ahUKEwiDt4-Zr8_9AhW7hP0HHeF_ACEQ_BJ6BQiNARAD", "33665 Bear Chase Ln, Bluemont, VA 20135", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
                   fluidRow(
-                    column(3),
+                    column(2),
                     column(
-                      6,
+                      8,
                       align = "center",
                       p("Keep the party going on Saturday at the 3rd annual Beer and Wine Festival at Bear Chase Brewing Company. Enjoy award-winning beer, wine, live music and food. Proost!", style = "margin-top: 25px; text-align: justify;"),
                     ),
-                    column(3)
+                    column(2)
                   )
                 )
               )
