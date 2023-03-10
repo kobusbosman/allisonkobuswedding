@@ -106,4 +106,25 @@ server <- function(input, output, session) {
       )
     )
   })
+  
+  output$thingstodo <- renderLeaflet({
+    
+    data_markers_accomodation <- tibble(
+      longitude = c(-77.4110323, -76.6110052, -77.0366835, -78.4540443),
+      latitude = c(39.4142055, 39.2865262, 38.8977968, 38.4753545),
+      name = c(
+        "<b>Frederick</b>", 
+        "<b>Baltimore</b>", 
+        "<b>Washington</b>",
+        "<b>Shenandoah National Park</b>"
+      )
+    )
+    
+    get_map_wedding(
+      data_markers = data_markers_accomodation,
+      icon_markers = "home", 
+      zoom = 12
+    )
+    
+  })
 }

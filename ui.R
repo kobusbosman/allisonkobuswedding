@@ -326,7 +326,49 @@ ui <- fluidPage(
       ),
       tabPanel(
         title = "Things to do",
-        "things to do"
+        fluidPage(
+          fluidRow(
+            column(1),
+            column(
+              10,
+              align = "center",
+              shinycssloaders::withSpinner(
+                leafletOutput("thingstodo"),
+                type = 8,
+                color = "#4c774f"
+              )
+            ),
+            column(1)
+          ),
+          fluidRow(
+            column(
+              6,
+              align = "center",
+              h1("Frederick"),
+              # img(src = "frederick.jpg")
+            ),
+            column(
+              6,
+              align = "center",
+              h1("Shenandoah National Park"),
+              # img(src = "shenandoah.jpg")
+            )
+          ),
+          fluidRow(
+            column(
+              6,
+              align = "center",
+              h1("Baltimore", style = "margin-top:75px"),
+              # img(src = "baltimore.jpg")
+            ),
+            column(
+              6,
+              align = "center",
+              h1("Washington", style = "margin-top:75px"),
+              # img(src = "mall.jpg")
+            )
+          )
+        )
       ),
       tabPanel(
         title = "FAQs",
