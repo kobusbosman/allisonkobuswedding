@@ -30,6 +30,13 @@
       "Repository": "CRAN",
       "Hash": "e8a22846fff485f0be3770c2da758713"
     },
+    "assertthat": {
+      "Package": "assertthat",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "50c838a310445e954bc13f26f26a6ecf"
+    },
     "base64enc": {
       "Package": "base64enc",
       "Version": "0.1-3",
@@ -337,6 +344,13 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "d71c815267c640f17ddbf7f16144b4bb"
+    },
+    "qrcode": {
+      "Package": "qrcode",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f1192030a93de676c3f6d9bfa447e7cc"
     },
     "rappdirs": {
       "Package": "rappdirs",

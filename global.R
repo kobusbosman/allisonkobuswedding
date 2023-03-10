@@ -6,6 +6,7 @@ library(googlesheets4)
 library(readr)
 library(dplyr)
 library(bslib)
+library(qrcode)
 
 drive_deauth()
 drive_auth(token = readRDS(".secrets/928dfaa8a7345b1e2252d3bb85b912c6_allisonkobusbosman@gmail.com"))

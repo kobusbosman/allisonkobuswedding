@@ -68,7 +68,7 @@ ui <- fluidPage(
                   column(
                     6,
                     align = "center",
-                    img(src = "lebowskifadesquare.jpg", align = "right", width = "75%", style = "margin-top:25px;")
+                    img(src = "lebowskifadesquare.jpg", align = "right", width = "300px", style = "margin-top:25px;")
                   )
                 )
               ),
@@ -88,7 +88,7 @@ ui <- fluidPage(
                 fluidRow(
                   column(
                     6,
-                    img(src = "ringfadesquare.jpg", align = "left", width = "75%", style = "margin-top:25px;")
+                    img(src = "ringfadesquare.jpg", align = "left", width = "300px", style = "margin-top:25px;")
                   ),
                   column(
                     6,
@@ -150,7 +150,7 @@ ui <- fluidPage(
                     column(2),
                     column(
                       8,
-                      p("Cocktail attire: Wear cocktail dresses, dressy jumpsuits, suits and jackets and slacks. The ceremony and reception will take place in one location. There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!", style = "margin-top: 25px; text-align: justify;"),
+                      p("Cocktail attire: wear cocktail dresses, dressy jumpsuits, suits and jackets and slacks. The ceremony and reception will take place in one location. There will be lawn games and snacks followed by food truck service and lots of dancing under the tent. Local beer and other beverages will be provided. Gezellig!", style = "margin-top: 25px; text-align: justify;"),
                     ),
                     column(2)
                   )
@@ -207,7 +207,7 @@ ui <- fluidPage(
                     type = 8,
                     color = "#4c774f"
                   )
-                 )
+                )
               ),
               fluidRow(
                 column(
@@ -256,7 +256,14 @@ ui <- fluidPage(
                   icon("plane-arrival", "fa-3x", style = "margin-top: 25px"),
                   h1("Travel"),
                   h3("Washington Dulles International Airport (IAD)", style = "margin-top: 25px"),
-                  p("KLM has direct flights between Amsterdam and Washington every day and the venue is less than an hour by car from the airport.", style = "margin-top: 25px")
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      p("KLM has direct flights between Amsterdam and Washington every day and the venue is less than an hour by car from the airport.", style = "margin-top: 25px; text-align: center;"),
+                    ),
+                    column(2)
+                  )
                 )
               ),
               fluidRow(
@@ -265,7 +272,14 @@ ui <- fluidPage(
                   align = "center",
                   icon("hotel", "fa-3x", style = "margin-top: 75px"),
                   h1("Accommodation", style = "margin-top: 25px"),
-                  p("We will post accommodation options here soon!", style = "margin-top: 25px")
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      p("We will post accommodation options here soon!", style = "margin-top: 25px; text-align: center;")
+                    ),
+                    column(2)
+                  )
                 )
               )
             ),
@@ -285,41 +299,20 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  p("Your presence is gift enough, but if you're feeling generous, contribute any amount to our newlywed fund.")
-                )
-              ),
-              fluidRow(
-                column(
-                  12,
-                  align = "center",
-                  h1("American", style = "margin-top: 25px;"),
                   fluidRow(
+                    column(2),
                     column(
-                      6,
-                      img(src="qrcodezelle.jpg", align = "center", width = "150px"),
-                      p("Zelle", style = "margin-top:5px")
+                      8,
+                      p("Your presence is gift enough, but if you're feeling generous, contribute any amount to our newlywed fund. Scan or click on the QR-codes below:", style = "text-align: justify;")
                     ),
-                    column(
-                      6,
-                      img(src="qrvenmo.jpg", align = "center", width = "150px"),
-                      p("Venmo", style = "margin-top:5px")
-                    )
+                    column(2)
                   )
                 )
               ),
-              fluidRow(
-                column(
-                  12,
-                  align = "center",
-                  h1("Dutch", style = "margin-top: 50px;"),
-                  fluidRow(
-                    column(
-                      12,
-                      img(src="qrcodeingmarch9.jpg", align = "center", style = "margin-bottom:10px", width = "150px"),
-                      p("ING betaalverzoek")
-                    )
-                  )
-                )
+              shinycssloaders::withSpinner(
+                uiOutput("allcodes"),
+                type = 8,
+                color = "#4c774f"
               )
             ),
             column(3)
