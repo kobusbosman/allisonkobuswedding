@@ -328,9 +328,9 @@ ui <- fluidPage(
         title = "Things to do",
         fluidPage(
           fluidRow(
-            column(1),
+            column(3),
             column(
-              10,
+              6,
               align = "center",
               shinycssloaders::withSpinner(
                 leafletOutput("thingstodo"),
@@ -338,7 +338,7 @@ ui <- fluidPage(
                 color = "#4c774f"
               )
             ),
-            column(1)
+            column(3)
           ),
           fluidRow(
             column(
