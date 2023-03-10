@@ -14,13 +14,21 @@ gs4_deauth()
 gs4_auth(token = readRDS(".secrets/928dfaa8a7345b1e2252d3bb85b912c6_allisonkobusbosman@gmail.com"))
 
 options(
-  # whenever there is one account token found, use the cached token
-  gargle_oauth_email = TRUE#,
-  # specify auth tokens should be stored in a hidden directory ".secrets"
-  # gargle_oauth_cache = "allisonkobuswedding/.secrets"
-
+  gargle_oauth_email = TRUE
 )
 
-# Get the ID of the sheet for writing programmatically
-# This should be placed at the top of your shiny app
-sheet_id <- drive_get("allisonkobusguests")$id
+qrcode_plotter <- function(toolName) {
+  locallink_txt <- list.files("www/", paste0(".+", tolower(toolName), ".+.txt$"))
+  locallink <- gsub(".{4}$", "", URLdecode(locallink_txt))
+  return(
+    tags$a(
+      img(
+        src = paste0(toolName, ".png"),
+        align = "center",
+        width = "150px"
+      ),
+      href = locallink,
+      target="_blank"
+    )
+  )
+}

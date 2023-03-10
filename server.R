@@ -6,18 +6,17 @@ server <- function(input, output, session) {
 
   temp_dir <- tempdir()
   
-  googledrive::drive_download("allisonkobusguests", path = glue::glue(temp_dir, "/allisonkobusguests.csv"), overwrite = TRUE) # if you want to let your guests writte their name
+  googledrive::drive_download("allisonkobusguests", path = glue::glue(temp_dir, "/allisonkobusguests.csv"), overwrite = TRUE)
   data_guests <- read_csv(glue::glue(temp_dir, "/allisonkobusguests.csv"), 
                           locale = locale(decimal_mark = ","),
                           col_types = cols(.default = col_character()))
   r_global$data_guests <- data_guests
   
-  googledrive::drive_download("paymentlinks", path = glue::glue(temp_dir, "/paymentlinks.csv"), overwrite = TRUE) # if you want to let your guests writte their name
+  googledrive::drive_download("paymentlinks", path = glue::glue(temp_dir, "/paymentlinks.csv"), overwrite = TRUE)
   paymentlinks <- read_csv(glue::glue(temp_dir, "/paymentlinks.csv"), 
                            locale = locale(decimal_mark = ","),
                            col_types = cols(.default = col_character()))
-  r_global$paymentlinks <- paymentlinks
-  
+
   output$nameselection <- renderUI({
     selectInput(
       inputId = "name",
@@ -68,45 +67,6 @@ server <- function(input, output, session) {
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
   })
   
-  output$zelle <- renderUI({
-    # if ( 1 == 2) {
-      tags$a(
-        img(
-          src = "Zelle.png",
-          align = "center",
-          width = "150px"
-        ),
-        href = gsub(".{4}$", "", URLdecode(list.files("www/", ".+zelle.+.txt$"))),
-        target="_blank"
-      )
-    # } else {
-    #   "hoi"
-    # }
-  })
-
-  output$venmo <- renderUI({
-    tags$a(
-      img(
-        src = "Venmo.png",
-        align = "center",
-        width = "150px"
-      ),
-      href = gsub(".{4}$", "", URLdecode(list.files("www/", ".+venmo.+.txt$"))),
-      target="_blank"
-    )  })
-
-  output$ing <- renderUI({
-    tags$a(
-      img(
-        src = "ING.png",
-        align = "center",
-        width = "150px"
-      ),
-      href = gsub(".{4}$", "", URLdecode(list.files("www/", ".+ing.+.txt$"))),
-      target="_blank"
-    )
-  })
-  
   output$allcodes <- renderUI({
     tagList(
       fluidRow(
@@ -117,13 +77,13 @@ server <- function(input, output, session) {
           fluidRow(
             column(
               6,
-              uiOutput("zelle"),
+              qrcode_plotter("Zelle"),
               p("Zelle", style = "margin-top:5px")
             ),
             column(
               6,
               align = "center",
-              uiOutput("venmo"),
+              qrcode_plotter("Venmo"),
               p("Venmo", style = "margin-top:5px")
             )
           )
@@ -138,7 +98,7 @@ server <- function(input, output, session) {
             column(
               12,
               align = "center",
-              uiOutput("ing"),
+              qrcode_plotter("ING"),
               p("ING", style = "margin-top:5px")
             )
           )
