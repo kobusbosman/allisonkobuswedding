@@ -18,13 +18,6 @@ ui <- fluidPage(
         fluidPage(
           fluidRow(
             column(
-              12,
-              align = "center",
-              img(src = "memorialflight.src", align = "right", width = "300px", style = "margin-top:25px;")
-            )
-          ),
-          fluidRow(
-            column(
               5,
               shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:right'>Kobus<br/>Bosman</h1>")
             ),
@@ -48,7 +41,13 @@ ui <- fluidPage(
               h6("Bluemont, VA", style = "margin-top: 25px"),
             )
           ),
-          fluidRow(),
+          fluidRow(
+            column(
+              12,
+              align = "center",
+              img(src = "memorialflight3.jpg", align = "center", width = "300px", style = "margin-top:50px;")
+            )
+          ),
           fluidRow(
             h3("How we met", style = "margin-top: 75px"),
             h6("February 2, 2020", style = "margin-top: 25px"),
@@ -66,7 +65,7 @@ ui <- fluidPage(
                   column(
                     6,
                     align = "center",
-                    img(src = "lebowskifadesquare.jpg", class = 'centerMobileOnly', align = "right", width = "300px", style = "margin-top:25px;")
+                    img(src = "lebowskifadesquare.jpg", align = "center", width = "300px", style = "margin-top:25px;")
                   )
                 )
               ),
@@ -86,7 +85,7 @@ ui <- fluidPage(
                 fluidRow(
                   column(
                     6,
-                    img(src = "ringfadesquare.jpg", class = 'centerMobileOnly', align = "left", width = "300px", style = "margin-top:25px;")
+                    img(src = "ringfadesquare.jpg", align = "center", width = "300px", style = "margin-top:25px;")
                   ),
                   column(
                     6,
@@ -240,7 +239,7 @@ ui <- fluidPage(
         )
       ),
       tabPanel(
-        title = "Travel and Accommodation",
+        title = "Travel and accommodation",
         fluidPage(
           fluidRow(
             column(3),
