@@ -17,30 +17,28 @@ ui <- fluidPage(
         title = "Home",
         fluidPage(
           fluidRow(
-            column(3),
             column(
-              6,
+              12,
               align = "center",
-              fluidRow(
-                column(
-                  5,
-                  shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:right'>Kobus<br/>Bosman</h1>")
-                ),
-                column(
-                  2,
-                  align = "center",
-                  shiny::HTML("<h3 class = 'AndDesktop'><br/>&</h3>"),
-                  shiny::HTML("<h3 class = 'AndMobile'>&</h3>")
-                ),
-                column(
-                  5,
-                  align = "left",
-                  shiny::HTML("<h1 class='centerMobileOnly style = 'text-align:left'>Allison<br/>Crawford</h1>")
-                ),
-                column(2)
-              )
+              img(src = "memorialflight.src", align = "right", width = "300px", style = "margin-top:25px;")
+            )
+          ),
+          fluidRow(
+            column(
+              5,
+              shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:right'>Kobus<br/>Bosman</h1>")
             ),
-            column(3)
+            column(
+              2,
+              align = "center",
+              shiny::HTML("<h3 class = 'AndDesktop'><br/>&</h3>"),
+              shiny::HTML("<h3 class = 'AndMobile'>&</h3>")
+            ),
+            column(
+              5,
+              align = "left",
+              shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:left'>Allison<br/>Crawford</h1>")
+            )
           ),
           fluidRow(
             column(
@@ -68,7 +66,7 @@ ui <- fluidPage(
                   column(
                     6,
                     align = "center",
-                    img(src = "lebowskifadesquare.jpg", align = "right", width = "300px", style = "margin-top:25px;")
+                    img(src = "lebowskifadesquare.jpg", class = 'centerMobileOnly', align = "right", width = "300px", style = "margin-top:25px;")
                   )
                 )
               ),
@@ -88,7 +86,7 @@ ui <- fluidPage(
                 fluidRow(
                   column(
                     6,
-                    img(src = "ringfadesquare.jpg", align = "left", width = "300px", style = "margin-top:25px;")
+                    img(src = "ringfadesquare.jpg", class = 'centerMobileOnly', align = "left", width = "300px", style = "margin-top:25px;")
                   ),
                   column(
                     6,
