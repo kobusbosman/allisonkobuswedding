@@ -368,7 +368,83 @@ ui <- fluidPage(
       ),
       tabPanel(
         title = "Line-up",
-        "wedding party"
+        fluidPage(
+          fluidRow(
+            column(
+              3,
+              align = "center",
+              style = "margin-bottom:35px",
+              h4("Taryn Blake Events", style = "margin-top:25px; margin-bottom:25px"),
+              div(
+                img(src = "taryn.jpg", align = "center", width = "200px"),
+                style = "display:flex; justify-content:center; align-items: center; height:200px;"
+              )
+            ),
+            column(
+              3,
+              align = "center",
+              style = "margin-bottom:35px",
+              h4("Bear Chase Brewing Company", style = "margin-top:25px; margin-bottom:25px"),
+              div(
+                img(src = "bearchasefaded.jpg", align = "center", width = "200px"),
+                style = "display:flex; justify-content:center; align-items: center; height:200px;"
+              )
+            ),
+            column(
+              3,
+              align = "center",
+              style = "margin-bottom:35px",
+              h4("The Vegan Factory", style = "margin-top:25px; margin-bottom:25px"),
+              div(
+                img(src = "tvftruck.png", align = "center", width = "200px"),
+                style = "display:flex; justify-content:center; align-items: center; height:200px;"
+              )
+            ),
+            column(
+              3,
+              align = "center",
+              style = "margin-bottom:35px",
+              h4("Sammy's Rental", style = "margin-top:25px; margin-bottom:25px"),
+              div(
+                img(src = "sammys.png", align = "center", width = "200px"),
+                style = "display:flex; justify-content:center; align-items: center; height:200px;"
+              )
+            )
+          ),
+          fluidRow(
+            column(
+              3,
+              align = "center",
+              style = "margin-bottom:35px",
+              h4("The Bere Collective", style = "margin-top:25px; margin-bottom:25px"),
+              div(
+                img(src = "theberecollectivelogocircle.png", align = "center", width = "200px"),
+                style = "display:flex; justify-content:center; align-items: center; height:200px;"
+              )
+            ),
+            column(
+              3,
+              align = "center",
+              style = "margin-bottom:35px",
+              h4("Fine Art Wedding Film", style = "margin-top:25px; margin-bottom:25px"),
+              div(
+                img(src = "fineart.jpg", align = "center", width = "200px"),
+                style = "display:flex; justify-content:center; align-items: center; height:200px;"
+              )
+            ),
+            column(
+              3,
+              align = "center",
+              style = "margin-bottom:35px",
+              h4("I76 Entertainment", style = "margin-top:25px; margin-bottom:25px"),
+              div(
+                img(src = "i76highway.png", align = "center", width = "200px"),
+                style = "display:flex; justify-content:center; align-items: center; height:200px;"
+              )
+            ),
+            column(3)
+          )
+        )
       ),
       tabPanel(
         title = "Gifts",
