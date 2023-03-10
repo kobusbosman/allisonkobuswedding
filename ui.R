@@ -285,6 +285,92 @@ ui <- fluidPage(
         )
       ),
       tabPanel(
+        title = "Things to do",
+        fluidPage(
+          fluidRow(
+            column(3),
+            column(
+              6,
+              align = "center",
+              shinycssloaders::withSpinner(
+                leafletOutput("thingstodo"),
+                type = 8,
+                color = "#4c774f"
+              )
+            ),
+            column(3)
+          ),
+          fluidRow(
+            column(2),
+            column(
+              4,
+              align = "center",
+              h1("Frederick", style = "margin-top:75px"),
+              img(src = "frederick.jpg", align = "center", width = "300px", style = "margin-top:25px;"),
+              fluidRow(
+                column(2),
+                column(
+                  8,
+                  p("If you're interested in seeing Allison's hometown, head to Frederick, Maryland. The historic downtown is particularly fun with it's quirky shops and hip restaurants. We recommend Hippie Chick Hummus and Cafe Nola.", style = "margin-top: 25px; text-align: justify;")
+                ),
+                column(2)
+              )
+            ),
+            column(
+              4,
+              align = "center",
+              h1("Shenandoah", style = "margin-top:75px"),
+              img(src = "shenandoah.jpg", align = "center", width = "300px", style = "margin-top:25px;"),
+              fluidRow(
+                column(2),
+                column(
+                  8,
+                  p("Nature lovers can't miss the stunning views from Skyline Drive and endless hikes in this nearby national park. Scramble up Old Rag if you're up for a challenge!", style = "margin-top: 25px; text-align: justify;")
+                ),
+                column(2)
+              )
+            ),
+            column(2)
+          ),
+          fluidRow(
+            column(2),
+            column(
+              4,
+              align = "center",
+              h1("Baltimore", style = "margin-top:75px"),
+              img(src = "baltimore.jpg", align = "center", width = "300px", style = "margin-top:25px;"),
+              fluidRow(
+                column(2),
+                column(
+                  8,
+                  p("Home of The Wire, Hairspray, and Edgar Allen Poe, Charm City speaks for itself. We recommend strolling around Fed Hill for a view of the harbor. Go Ravens!", style = "margin-top: 25px; text-align: justify;")
+                ),
+                column(2)
+              )
+            ),
+            column(
+              4,
+              align = "center",
+              h1("Washington", style = "margin-top:75px"),
+              img(src = "mall.jpg", align = "center", width = "300px", style = "margin-top:25px;"),
+              fluidRow(
+                column(2),
+                column(
+                  8,
+                  p("Spend some time in the nation's capital walking along the National Mall, hitting a bar in Dupont Circle, or enjoying one of the many free Smithsonian museums.", style = "margin-top: 25px; text-align: justify;")
+                ),
+                column(2)
+              )
+            ),
+            column(2)
+          )
+        )
+      ),
+      tabPanel(
+        title = "Line-up",
+        "wedding party"
+      ),
+      tabPanel(
         title = "Gifts",
         fluidPage(
           fluidRow(
@@ -317,58 +403,8 @@ ui <- fluidPage(
         )
       ),
       tabPanel(
-        title = "Line-up",
-        "wedding party"
-      ),
-      tabPanel(
         title = "Gallery",
         "gallery"
-      ),
-      tabPanel(
-        title = "Things to do",
-        fluidPage(
-          fluidRow(
-            column(3),
-            column(
-              6,
-              align = "center",
-              shinycssloaders::withSpinner(
-                leafletOutput("thingstodo"),
-                type = 8,
-                color = "#4c774f"
-              )
-            ),
-            column(3)
-          ),
-          fluidRow(
-            column(
-              6,
-              align = "center",
-              h1("Frederick"),
-              # img(src = "frederick.jpg")
-            ),
-            column(
-              6,
-              align = "center",
-              h1("Shenandoah National Park"),
-              # img(src = "shenandoah.jpg")
-            )
-          ),
-          fluidRow(
-            column(
-              6,
-              align = "center",
-              h1("Baltimore", style = "margin-top:75px"),
-              # img(src = "baltimore.jpg")
-            ),
-            column(
-              6,
-              align = "center",
-              h1("Washington", style = "margin-top:75px"),
-              # img(src = "mall.jpg")
-            )
-          )
-        )
       ),
       tabPanel(
         title = "FAQs",
