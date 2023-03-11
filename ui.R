@@ -436,7 +436,7 @@ ui <- fluidPage(
               3,
               align = "center",
               style = "margin-bottom:35px",
-              h4("I76 Entertainment", style = "margin-top:25px; margin-bottom:25px"),
+              h4("I-76 Entertainment", style = "margin-top:25px; margin-bottom:25px"),
               div(
                 img(src = "i76highway.png", align = "center", width = "200px"),
                 style = "display:flex; justify-content:center; align-items: center; height:200px;"
