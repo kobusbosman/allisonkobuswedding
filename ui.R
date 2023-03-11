@@ -128,7 +128,7 @@ ui <- fluidPage(
                     column(2),
                     column(
                       8,
-                      p("Join us in the scenic Blue Ridge mountains for a pre-wedding hike.")
+                      p("Join us in the scenic Blue Ridge mountains for a pre-wedding hike.", style = "margin-top: 25px; text-align: justify;")
                     ),
                     column(2)
                   )
@@ -484,7 +484,149 @@ ui <- fluidPage(
       ),
       tabPanel(
         title = "FAQs",
-        "faqs"
+        fluidPage(
+          fluidRow(
+            column(3),
+            column(
+              6,
+              align = "center",
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      fluidRow(
+                        h4("Can I bring a guest?", style = "text-align:justify")
+                      ),
+                      fluidRow(
+                        p("Maybe! If there's someone special in your life that you would love to bring along, reach out to Allison or Kobus and we may be able to squeeze them onto the guest list.", style = "margin-bottom:50px; text-align: justify;")
+                      )
+                    ),
+                    column(2)
+                  )
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      fluidRow(
+                        h4("What should I wear?", style = "text-align:justify")
+                      ),
+                      fluidRow(
+                        p("Cocktail attire: wear cocktail dresses, dressy jumpsuits, suits and jackets and slacks.", style = "margin-bottom:50px; text-align: justify;"))
+                      )
+                    ,
+                    column(2)
+                  )
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      fluidRow(
+                        h4("What kind of food will there be?", style = "text-align:justify")
+                      ),
+                      fluidRow(
+                        p("The menu will be all-vegan! We will have a food truck for the main course and some additional snacks and desserts.", style = "margin-bottom:50px; text-align: justify;"))
+                    )
+                    ,
+                    column(2)
+                  )
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      fluidRow(
+                        h4("Can I arrive early?", style = "text-align:justify")
+                      ),
+                      fluidRow(
+                        p("Yes! We have booked the venue for the weekend so feel free to arrive around 3PM and play some lawn games and hang out while we are getting ready.", style = "margin-bottom:50px; text-align: justify;"))
+                    )
+                    ,
+                    column(2)
+                  )
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      fluidRow(
+                        h4("Do I need to learn any Dutch?", style = "text-align:justify")
+                      ),
+                      fluidRow(
+                        p("Dat kan maar dat is helemaal niet nodig! Met gebaren, geluiden en lichaamstaal kom je al een heel eind.", style = "margin-bottom: 50px; text-align: justify;"))
+                    )
+                    ,
+                    column(2)
+                  )
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      fluidRow(
+                        h4("What is the meaning of life?", style = "text-align:justify")
+                      ),
+                      fluidRow(
+                        p("Love!", style = "margin-bottom: 50px; text-align: justify;"))
+                    )
+                    ,
+                    column(2)
+                  )
+                )
+              ),
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      fluidRow(
+                        h4("This website is amazing! How did you make it???", style = "text-align:justify")
+                      ),
+                      fluidRow(
+                        p('Kobus made it himself! He used RStudio and Shiny, check out the code here: ', a(href = 'https://github.com/kobusbosman/allisonkobuswedding', 'https://github.com/kobusbosman/allisonkobuswedding', .noWS = "outside", target="_blank"), '.', .noWS = c("after-begin", "before-end")) , style = "margin-bottom:50px; text-align: justify;")
+                    )
+                    ,
+                    column(2)
+                  )
+                )
+              )
+            ),
+            column(3)
+          )
+        )
       )
     )
   )
