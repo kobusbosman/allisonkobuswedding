@@ -12,11 +12,6 @@ server <- function(input, output, session) {
                           col_types = cols(.default = col_character()))
   r_global$data_guests <- data_guests
   
-  googledrive::drive_download("paymentlinks", path = glue::glue(temp_dir, "/paymentlinks.csv"), overwrite = TRUE)
-  paymentlinks <- read_csv(glue::glue(temp_dir, "/paymentlinks.csv"), 
-                           locale = locale(decimal_mark = ","),
-                           col_types = cols(.default = col_character()))
-
   output$nameselection <- renderUI({
     selectInput(
       inputId = "name",

@@ -19,9 +19,13 @@ options(
   gargle_oauth_email = TRUE
 )
 
+paymentlinks <- read_csv(
+  "www/paymentlinks.csv", 
+  locale = locale(decimal_mark = ","),
+  col_types = cols(.default = col_character())
+)
+
 qrcode_plotter <- function(toolName) {
-  locallink_txt <- list.files("www/", paste0(".+", tolower(toolName), ".+.txt$"))
-  locallink <- gsub(".{4}$", "", URLdecode(locallink_txt))
   return(
     tags$a(
       img(
@@ -29,15 +33,13 @@ qrcode_plotter <- function(toolName) {
         align = "center",
         width = "150px"
       ),
-      href = locallink,
+      href = paymentlinks[[which(paymentlinks$tool == toolName),"link"]],
       target="_blank"
     )
   )
 }
 
-get_map_wedding <- function(data_markers, 
-                            icon_markers,
-                            zoom = 7) {
+get_map_wedding <- function(data_markers, icon_markers, zoom = 7) {
   
   if (nrow(data_markers) > 1) {
     centroid_map <- as.vector(centroid(data_markers %>% select(longitude, latitude) %>% as.data.frame()))
