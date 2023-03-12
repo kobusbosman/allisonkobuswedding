@@ -1,9 +1,9 @@
 server <- function(input, output, session) {
   
   shinyjs::addClass(id = "menus", class = "display:inline-block")
-
+  
   r_global <- reactiveValues()
-
+  
   temp_dir <- tempdir()
   
   googledrive::drive_download("allisonkobusguests", path = glue::glue(temp_dir, "/allisonkobusguests.csv"), overwrite = TRUE)
@@ -11,44 +11,24 @@ server <- function(input, output, session) {
                           locale = locale(decimal_mark = ","),
                           col_types = cols(.default = col_character()))
   r_global$data_guests <- data_guests
-  
-  output$nameselection <- renderUI({
-    selectInput(
-      inputId = "name",
-      label = "Please select your name",
-      choices = r_global$data_guests$name
-    )
-  })
-  output$rsvp <- renderUI({
-    selectInput(
-      inputId = "rsvp",
-      label = "Are you attending the wedding?",
-      choices = c("Yes", "No")
-    )
-  })
-  output$song <- renderUI({
-    textAreaInput(
-      inputId = "song",
-      label = "Do you have a favorite song you would like to be played?",
-      height = "25px"
-    )
-  })
-  output$remarks <- renderUI({
-    textAreaInput(
-      inputId = "remarks",
-      label = "Do you have additional remarks?",
-      height = "25px"
-    )
-  })
-  
+
   observeEvent(input$submit, {
     showModal(
       modalDialog(
         title = "Thanks for confirming!",
-        glue::glue("Your RSVP for {input$name} has been saved. Please fill in the form for other members of your family.")
+          div(
+            style = "text-align:justify",
+            paste(
+              glue::glue("The RSVP for {input$name}"),
+              " has been saved. You can now add additional RSVPs of your party. ",
+              "You can fill in this form again at a later time, ",
+              "we'll just look at your last entry."
+          )
+        )
       )
     )
-    r_global$data_guests <- r_global$data_guests %>% rows_update(
+
+    r_global$data_guests <- r_global$data_guests %>% bind_rows(
       tibble(
         name = input$name,
         rsvp = input$rsvp,
@@ -57,7 +37,6 @@ server <- function(input, output, session) {
         datetime = as.character(Sys.time())
       )
     )
-    temp_dir <- tempdir()
     readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
   })

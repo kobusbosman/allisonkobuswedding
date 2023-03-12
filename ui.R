@@ -189,20 +189,17 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  p("Thanks for letting us know if you're joining! Please fill out this form for every individual:")
+                  p("Thanks for letting us know if you're joining!")
                 )
               ),
               fluidRow(
                 column(
                   12,
                   align = "center",
-                  shinycssloaders::withSpinner(
-                    uiOutput(
-                      "nameselection",
-                      style = "margin-top: 25px;"
-                    ),
-                    type = 8,
-                    color = "#4c774f"
+                  style = "margin-top: 25px;",
+                  textInput(
+                    inputId = "name",
+                    label = "Your name(s):"
                   )
                 )
               ),
@@ -210,28 +207,46 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  uiOutput("rsvp", style = "margin-top: 25px;")
+                  style = "margin-top: 25px;",
+                  radioButtons(
+                    inputId = "rsvp",
+                    label = "Are you attending the wedding?",
+                    choices = c("Yes", "No"),
+                    inline = TRUE
+                  )
                 )
               ),
               fluidRow(
                 column(
                   12,
                   align = "center",
-                  uiOutput("song", style = "margin-top: 25px;")
+                  style = "margin-top: 25px;",
+                  textInput(
+                    inputId = "song",
+                    label = "Do you have a favorite song you would like to be played?"
+                  )
                 )
               ),
               fluidRow(
                 column(
                   12,
                   align = "center",
-                  uiOutput("remarks", style = "margin-top: 25px;")
+                  style = "margin-top: 25px;",
+                  textInput(
+                    inputId = "remarks",
+                    label = "Do you have additional remarks?"
+                  )
                 )
               ),
               fluidRow(
                 column(
                   12,
                   align = "center",
-                  actionButton(inputId = "submit", label = "Send to Allison & Kobus", style = "border-color: #4c774f; margin-top: 25px; text-align: justify; margin-bottom:5px")
+                  actionButton(
+                    inputId = "submit",
+                    label = "Send to Allison & Kobus",
+                    style = "border-color: #4c774f; margin-top: 25px; text-align: justify; margin-bottom:5px"
+                  )
                 )
               )
             )
