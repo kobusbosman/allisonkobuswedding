@@ -70,3 +70,14 @@ get_map_wedding <- function(data_markers, icon_markers, zoom = 7) {
       )
     )
 }
+
+last_image <- "PHOTO-2022-11-27-16-23-49_imageboard.jpg"
+imagepaths_read <- readLines("www/imagepaths.txt")
+
+randomize_imageboard <- function(x) {
+  imagepaths <- list.files(path = "www", pattern ="imageboard")
+  imagepaths <- imagepaths[which(imagepaths != last_image)]
+  imagepaths <- sample(imagepaths)
+  writeLines(imagepaths, "www/imagepaths.txt")
+}
+# randomize_imageboard()

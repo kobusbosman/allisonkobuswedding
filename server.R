@@ -106,4 +106,23 @@ server <- function(input, output, session) {
       zoom = 7
     )
   })
+
+  output$imageboard <- renderUI({
+    fluidRow(
+      column(
+        12,
+        align="center",
+        do.call(
+          div,
+          lapply(
+            imagepaths_read,
+            function(x) {
+              img(src=x, align = "center", class = "imageboardimage")
+            }
+          )
+        ),
+        img(src = last_image, align = "center", class = "imageboardimage")
+      )
+    )
+  })
 }

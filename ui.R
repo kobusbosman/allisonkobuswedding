@@ -526,8 +526,8 @@ ui <- fluidPage(
         )
       ),
       tabPanel(
-        title = "Gallery",
-        "gallery"
+        title = "Moments",
+        uiOutput("imageboard")
       ),
       tabPanel(
         title = "FAQs",
