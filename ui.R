@@ -663,7 +663,7 @@ ui <- fluidPage(
                         h4("This website is amazing! How did you make it???", style = "text-align:justify")
                       ),
                       fluidRow(
-                        p('Kobus made it himself! He used RStudio and Shiny, check out the code here: ', a(href = 'https://github.com/kobusbosman/allisonkobuswedding', 'https://github.com/kobusbosman/allisonkobuswedding', .noWS = "outside", target="_blank"), '.', .noWS = c("after-begin", "before-end")) , style = "margin-bottom:50px; text-align: justify;")
+                        p('Kobus made it himself! He used RStudio and Shiny, check out the code on ', a(href = 'https://github.com/kobusbosman/allisonkobuswedding', 'GitHub', .noWS = "outside", target="_blank"), '.', .noWS = c("after-begin", "before-end")) , style = "margin-bottom:50px; text-align: justify;")
                     )
                     ,
                     column(2)
