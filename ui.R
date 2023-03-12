@@ -318,7 +318,7 @@ ui <- fluidPage(
                       p(
                         "After this date, reservations at the rate offered will still be accepted on a space-available basis only by dialing the hotel directly. ",
                         br(),br(),
-                        "Transportation between the hotel and the venue will be provided.",
+                        "A shuttle between the Hampton Inn and Suites and the wedding venue will be provided.",
                         style = "margin-top: 25px; text-align: justify;"
                       ),
                     ),
