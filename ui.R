@@ -1,4 +1,13 @@
 ui <- fluidPage(
+  HTML('<input type="text" id="client_time" name="client_time" style="display: none;"> '),
+  HTML('<input type="text" id="client_time_zone_offset" name="client_time_zone_offset" style="display: none;"> '),
+  tags$script('
+    $(function() {
+      var time_now = new Date()
+      $("input#client_time").val(time_now.getTime())
+      $("input#client_time_zone_offset").val(time_now.getTimezoneOffset())
+    });    
+  '),
   column(
     12,
     align = "center",

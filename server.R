@@ -2,6 +2,9 @@ server <- function(input, output, session) {
   
   shinyjs::addClass(id = "menus", class = "display:inline-block")
   
+  client_time <- reactive(lubridate::as_datetime(as.numeric(input$client_time) / 1000))
+  time_zone_offset <- reactive(-(as.numeric(input$client_time_zone_offset)/60))
+  
   r_global <- reactiveValues()
   
   temp_dir <- tempdir()
@@ -27,16 +30,18 @@ server <- function(input, output, session) {
         )
       )
     )
-
+    
     r_global$data_guests <- r_global$data_guests %>% bind_rows(
       tibble(
         name = input$name,
         rsvp = input$rsvp,
         song = input$song,
         remarks = input$remarks,
-        datetime = as.character(Sys.time())
+        datetime = as.character(client_time()),
+        utc = paste0("UTC+", time_zone_offset())
       )
     )
+
     readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
   })
@@ -82,22 +87,22 @@ server <- function(input, output, session) {
   })
   
   output$thingstodo <- renderLeaflet({
-    
+
     data_markers <- tibble(
       longitude = c(-77.4110323, -76.6110052, -77.0366835, -78.4540443, -77.8245632),
       latitude = c(39.4142055, 39.2865262, 38.8977968, 38.4753545, 39.137776),
       name = c(
-        "<b>Frederick</b>", 
-        "<b>Baltimore</b>", 
+        "<b>Frederick</b>",
+        "<b>Baltimore</b>",
         "<b>Washington</b>",
         "<b>Shenandoah National Park</b>",
         "<b>Wedding location</br>"
       )
     )
-    
+
     get_map_wedding(
       data_markers = data_markers,
-      icon_markers = "home", 
+      icon_markers = "home",
       zoom = 7
     )
   })
