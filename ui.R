@@ -281,7 +281,7 @@ ui <- fluidPage(
                     column(2),
                     column(
                       8,
-                      p("KLM has direct flights between Amsterdam and Washington every day and the venue is less than an hour by car from the airport.", style = "margin-top: 25px; text-align: center;"),
+                      p("KLM has direct flights between Amsterdam and Washington every day and the venue is less than an hour by car from the airport.", style = "margin-top: 25px; text-align: justify;"),
                     ),
                     column(2)
                   )
@@ -293,11 +293,34 @@ ui <- fluidPage(
                   align = "center",
                   icon("hotel", "fa-3x", style = "margin-top: 75px"),
                   h1("Accommodation", style = "margin-top: 25px"),
+                  h3("Hampton Inn and Suites", style = "margin-top: 25px"),
+                  p("Oct 20th, 15.00 PM - Oct 21st, 12.00 PM"),
+                  p(a(href = "https://www.google.com/maps/place/Hampton+Inn+%26+Suites+Charles+Town/@39.2999214,-77.8440491,17z/data=!3m1!4b1!4m6!3m5!1s0x89b6017f30687469:0x641dcc3e720e3e71!8m2!3d39.2999214!4d-77.8418604!16s%2Fg%2F11c2pwxk7c", "157 Pimlico Dr, Charles Town, WV 25414", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
                   fluidRow(
                     column(2),
                     column(
                       8,
-                      p("We will post accommodation options here soon!", style = "margin-top: 25px; text-align: center;")
+                      align = "center",
+                      p(
+                        "For your convenience, a block of rooms has been set aside at Hampton Inn & Suites in Charles Town, West Virginia. ",
+                        "Reservations within the block may be made by phone or online: ",
+                        br(),br(),
+                        "1. Call 1-304-725-2200, speak with one of the guest service agents and let them know you want to book a room for October 20th, 2023 in the group code CBW (Crawford Bosman Wedding).",
+                        br(),br(),
+                        "2. Visit ",
+                        a(href = "https://group.hamptoninn.com/vwzdtf", "here", .noWS = "outside", target="_blank"), " ", .noWS = c("after-begin", "before-end"),
+                        "and edit the dates if necessary. Use the group code CBW when making your booking. ",
+                        br(),br(),
+                        style = "margin-top: 25px; text-align: justify;"
+                      ),
+                      p("Please note the cut-off date for reservations is: ", style = "margin-top:0px; font-weight:1000; font-size:1.1em;"),
+                      p("September 21st, 2023. ", style = "margin-top:0px; font-weight:1000; font-size:1.1em;"),
+                      p(
+                        "After this date, reservations at the rate offered will still be accepted on a space-available basis only by dialing the hotel directly. ",
+                        br(),br(),
+                        "Transportation between the hotel and the venue will be provided.",
+                        style = "margin-top: 25px; text-align: justify;"
+                      ),
                     ),
                     column(2)
                   )
