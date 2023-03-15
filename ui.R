@@ -60,50 +60,56 @@ ui <- fluidPage(
           fluidRow(
             h3("How we met", style = "margin-top: 75px"),
             h6("February 2, 2020", style = "margin-top: 25px"),
-            fluidRow(
-              column(3),
-              column(
-                6,
-                align = "center",
-                fluidRow(
-                  column(
-                    6,
-                    align = "center",
-                    p("Kobus and Allison matched on Hinge in December, 2019. After several weeks of hilarious banter, Allison traveled to Utrecht on a Sunday for their first date at Lebowski's pub, where they talked for over six hours. They spent the next two and a half years making the two-hour journey between Utrecht and Groningen almost every weekend until Allison moved in with Kobus in summer 2022. They enjoy eating plants, dancing zouk, and living the city life.", style = "margin-top: 25px; text-align: justify;")
-                  ),
-                  column(
-                    6,
-                    align = "center",
-                    img(src = "lebowskifadesquare.jpg", align = "center", width = "300px", style = "margin-top:25px;")
+            column(
+              12,
+              fluidRow(
+                column(3),
+                column(
+                  6,
+                  align = "center",
+                  fluidRow(
+                    column(
+                      6,
+                      align = "center",
+                      p("Kobus and Allison matched on Hinge in December, 2019. After several weeks of hilarious banter, Allison traveled to Utrecht on a Sunday for their first date at Lebowski's pub, where they talked for over six hours. They spent the next two and a half years making the two-hour journey between Utrecht and Groningen almost every weekend until Allison moved in with Kobus in summer 2022. They enjoy eating plants, dancing zouk, and living the city life.", style = "margin-top: 25px; text-align: justify;")
+                    ),
+                    column(
+                      6,
+                      align = "center",
+                      img(src = "lebowskifadesquare.jpg", align = "center", width = "300px", style = "margin-top:25px;")
+                    )
                   )
-                )
-              ),
-              column(3)
+                ),
+                column(3)
+              )
             )
           ),
           fluidRow(
             h3("Our proposal", style = "margin-top: 75px"),
             h6("December 24, 2022", style = "margin-top: 25px"),
-            fluidRow(
-              column(
-                3
-              ),
-              column(
-                6,
-                align = "center",
-                fluidRow(
-                  column(
-                    6,
-                    img(src = "ringfadesquare.jpg", align = "center", width = "300px", style = "margin-top:25px;")
-                  ),
-                  column(
-                    6,
-                    p("A lonely Allison boarded a plane by herself to visit her family in the US for Christmas. Little did she know, Kobus was making secret plans with her parents to join her a week later. He showed up at her sister Lauren's house on December 23rd and became the best Christmas miracle ever... or so she thought. The next day Kobus insisted on heading out in 15-degree weather (-10C) to hike up Sugarloaf Mountain. When they reached the top Kobus put on some music and asked Allison to dance. Once Taylor Swift said, \"I\'ve loved you three summers now, honey, but I want \'em all,\" Kobus knelt down and asked if Allison would marry him. When she gained her composure, Allison immediately said yes!", style = "margin-top: 25px; text-align: justify;")
+            column(
+              12,
+              fluidRow(
+                column(
+                  3
+                ),
+                column(
+                  6,
+                  align = "center",
+                  fluidRow(
+                    column(
+                      6,
+                      img(src = "ringfadesquare.jpg", align = "center", width = "300px", style = "margin-top:25px;")
+                    ),
+                    column(
+                      6,
+                      p("A lonely Allison boarded a plane by herself to visit her family in the US for Christmas. Little did she know, Kobus was making secret plans with her parents to join her a week later. He showed up at her sister Lauren's house on December 23rd and became the best Christmas miracle ever... or so she thought. The next day Kobus insisted on heading out in 15-degree weather (-10C) to hike up Sugarloaf Mountain. When they reached the top Kobus put on some music and asked Allison to dance. Once Taylor Swift said, \"I\'ve loved you three summers now, honey, but I want \'em all,\" Kobus knelt down and asked if Allison would marry him. When she gained her composure, Allison immediately said yes!", style = "margin-top: 25px; text-align: justify;")
+                    )
                   )
+                ),
+                column(
+                  3
                 )
-              ),
-              column(
-                3
               )
             )
           )
