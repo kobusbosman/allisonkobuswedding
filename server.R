@@ -47,6 +47,11 @@ server <- function(input, output, session) {
 
     readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
+    
+    updateTextInput(inputId = "firstname", value = "")
+    updateTextInput(inputId = "lastname", value = "")
+    updateTextInput(inputId = "song", value = "")
+    updateTextInput(inputId = "remarks", value = "")
   })
   
   output$allcodes <- renderUI({
