@@ -14,18 +14,20 @@ server <- function(input, output, session) {
                           locale = locale(decimal_mark = ","),
                           col_types = cols(.default = col_character()))
   r_global$data_guests <- data_guests
-
+  
   observeEvent(input$submit, {
     showModal(
       modalDialog(
         title = "Thanks for confirming!",
-          div(
-            style = "text-align:justify",
+        div(
+          style = "text-align:justify",
+          HTML(
             paste(
-              glue::glue("The RSVP for {input$name}"),
-              " has been saved. You can now add additional RSVPs of your party. ",
+              glue::glue("The RSVP for {input$firstname} {input$lastname} "),
+              "has been saved. You can now add additional RSVPs of your party. ",
               "You can fill in this form again at a later time, ",
               "we'll just look at your last entry."
+            )
           )
         )
       )
@@ -33,7 +35,8 @@ server <- function(input, output, session) {
     
     r_global$data_guests <- r_global$data_guests %>% bind_rows(
       tibble(
-        name = input$name,
+        firstname = input$firstname,
+        lastname = input$lastname,
         rsvp = input$rsvp,
         song = input$song,
         remarks = input$remarks,

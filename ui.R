@@ -204,19 +204,30 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
-                  p("Thanks for letting us know if you're joining!")
+                  p("Thanks for letting us know if you're joining! Please submit one form per individual:")
                 )
               ),
               fluidRow(
+                column(3),
                 column(
-                  12,
+                  3,
                   align = "center",
                   style = "margin-top: 25px;",
                   textInput(
-                    inputId = "name",
-                    label = "Your name(s):"
+                    inputId = "firstname",
+                    label = "First Name:"
                   )
-                )
+                ),
+                column(
+                  3,
+                  align = "center",
+                  style = "margin-top: 25px;",
+                  textInput(
+                    inputId = "lastname",
+                    label = "Last name:"
+                  )
+                ),
+                column(3)
               ),
               fluidRow(
                 column(
