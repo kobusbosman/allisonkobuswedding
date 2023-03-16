@@ -71,12 +71,23 @@ get_map_wedding <- function(data_markers, icon_markers, zoom = 7) {
     )
 }
 
-last_image <- "PHOTO-2022-11-27-16-23-49_imageboard.jpg"
+last_image <- "PHOTO-2022-11-27-16-23-49_imageboard.jpg_converted.jpg"
+excluded_images <- c(
+  last_image,
+  "20200814_144606_imageboard.jpg_converted.jpg_converted.jpg",
+  "20200815_164714_imageboard.jpg_converted.jpg_converted.jpg",
+  "df982328-41ed-4a17-9479-2a0d03efed7a_imageboard.JPG_converted.jpg",
+  "f25e7458-c004-46ee-ad23-64d27c38c956_imageboard.JPG_converted.jpg",
+  "IMG-1642_imageboard.jpg_converted.jpg",
+  "IMG-4568_imageboard.jpg_converted.jpg",
+  "20201102_140259_imageboard.jpg_converted.jpg",
+  "IMG-3365_imageboard.jpg_converted.jpg"
+)
 imagepaths_read <- readLines("www/imagepaths.txt")
 
 randomize_imageboard <- function(x) {
-  imagepaths <- list.files(path = "www", pattern ="imageboard")
-  imagepaths <- imagepaths[which(imagepaths != last_image)]
+  imagepaths <- list.files(path = "www", pattern ="_converted")
+  imagepaths <- imagepaths[which(!imagepaths %in% excluded_images)]
   imagepaths <- sample(imagepaths)
   writeLines(imagepaths, "www/imagepaths.txt")
 }
