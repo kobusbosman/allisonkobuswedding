@@ -1,4 +1,5 @@
 ui <- fluidPage(
+  tags$head(tags$link(rel="shortcut icon", href="https://img.favpng.com/23/4/23/family-icon-png-favpng-eJfQfkJFe2q8i3drTX92J1VMQ.jpg")),
   HTML('<input type="text" id="client_time" name="client_time" style="display: none;"> '),
   HTML('<input type="text" id="client_time_zone_offset" name="client_time_zone_offset" style="display: none;"> '),
   tags$script('
@@ -17,7 +18,7 @@ ui <- fluidPage(
   div(
     class = "navbar1",
     navbarPage(
-      title = "",
+      title = "Allison & Kobus wedding website",
       theme = bs_theme(
         bootswatch = "lux"
       ),
