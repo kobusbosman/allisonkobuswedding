@@ -97,14 +97,15 @@ server <- function(input, output, session) {
   output$thingstodo <- renderLeaflet({
 
     data_markers <- tibble(
-      longitude = c(-77.4110323, -76.6110052, -77.0366835, -78.4540443, -77.8245632),
-      latitude = c(39.4142055, 39.2865262, 38.8977968, 38.4753545, 39.137776),
+      longitude = c(-77.4110323, -76.6110052, -77.0366835, -78.19405, -77.8245632, -77.8422268),
+      latitude = c(39.4142055, 39.2865262, 38.8977968, 38.9027749, 39.137776, 39.2999253),
       name = c(
         "<b>Frederick</b>",
         "<b>Baltimore</b>",
         "<b>Washington</b>",
         "<b>Shenandoah National Park</b>",
-        "<b>Wedding location</br>"
+        "<b>Wedding location</br>",
+        "<b>Hampton Inn & Suites</br>"
       )
     )
 
