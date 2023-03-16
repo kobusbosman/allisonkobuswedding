@@ -1,0 +1,118 @@
+.navbar1 {text-align:center !important;}
+
+.navbar-nav > li{
+  margin-left:16px !important;
+  margin-right:16px !important;
+}
+
+.navbar {display: inline-block !important; text-transform: none !important;}
+
+.navbar-brand {display: none !important;}
+
+.btn {text-transform: none !important;}
+
+.btn::before {
+  background-color: #54b3d6 !important;
+  height: 2px !important;
+  bottom: 0 !important;
+  transform-origin: 100% 50% !important;
+  transform: scaleX(0) !important;
+}
+
+.btn:hover::before,
+.btn:focus::before {
+  transform-origin: 0% 50% !important;
+  transform: scaleX(1) !important;
+}
+
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  text-transform: none !important;
+}
+
+@media (max-device-width: 799px) {
+  .centerMobileOnly{
+    text-align: center !important;
+  }
+}
+
+@media (max-device-width: 799px) {
+  .AndDesktop{
+    display: none !important;
+  }
+}
+@media (min-device-width: 800px) {
+  .AndMobile{
+    display: none !important;
+  }
+}
+
+.form-control {
+  text-align:center !important;
+  width: 300px !important;
+}
+
+.radio-inline {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+.imageboardimage {
+  margin-right:25px !important;
+  margin-bottom: 25px !important;
+  width:100% !important;
+  max-width: 400px !important;
+  height:auto !important;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-30px) rotate(-25deg);
+  }
+  
+  100% {
+    transform: translateX(250px) rotate(-25deg);
+  }
+}
+
+.shine {
+  text-align: center;
+  margin: 1rem;
+  background: #4c774f;
+  color: #FFFFFF;
+  padding: 0.75rem 1.25rem;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all 100ms linear;
+}
+
+.shine:hover {
+  transform: scale(1.05) rotate(-2.5deg);
+}
+
+.shine:hover::after {
+  content: '';
+  display: block;
+  width: 75px;
+  height: 175%;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+  opacity: 0.5;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  animation: shine 200ms linear;
+  transform: translateX(250px) rotate(-25deg);
+}
