@@ -129,8 +129,7 @@ server <- function(input, output, session) {
               img(src=x, align = "center", class = "imageboardimage")
             }
           )
-        ),
-        img(src = last_image, align = "center", class = "imageboardimage")
+        )
       )
     )
   })
