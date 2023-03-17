@@ -216,7 +216,7 @@ ui <- fluidPage(
                   style = "margin-top: 25px;",
                   textInput(
                     inputId = "firstname",
-                    label = "First Name:"
+                    label = "First name:"
                   )
                 ),
                 column(
