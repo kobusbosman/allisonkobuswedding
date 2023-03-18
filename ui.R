@@ -52,11 +52,13 @@ ui <- fluidPage(
             )
           ),
           fluidRow(
+            column(5),
             column(
-              12,
+              2,
               align = "center",
-              img(src = "memorialflight3.jpg", align = "center", width = "300px", style = "margin-top:50px;")
-            )
+              img(src = "memorialflight3.jpg", align = "center", width = "100%", style = "margin-top:50px;")
+            ),
+            column(5)
           ),
           fluidRow(
             h3("How we met", style = "margin-top: 75px"),
