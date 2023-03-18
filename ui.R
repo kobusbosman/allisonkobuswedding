@@ -195,7 +195,7 @@ ui <- fluidPage(
         )
       ),
       tabPanel(
-        title = "RSVP",
+        title = "Attendance",
         fluidPage(
           fluidRow(
             column(
