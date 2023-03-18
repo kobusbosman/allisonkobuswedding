@@ -29,7 +29,7 @@ ui <- fluidPage(
           fluidRow(
             column(
               5,
-              shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:right'>Kobus<br/>Bosman</h1>")
+              shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:right'>Allison<br/>Marie<br/>Crawford</h1>")
             ),
             column(
               2,
@@ -40,7 +40,7 @@ ui <- fluidPage(
             column(
               5,
               align = "left",
-              shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:left'>Allison<br/>Crawford</h1>")
+              shiny::HTML("<h1 class='centerMobileOnly' style = 'text-align:left'>Kobus<br/>Johannes<br/>Bosman</h1>")
             )
           ),
           fluidRow(
