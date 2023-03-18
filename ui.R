@@ -34,7 +34,7 @@ ui <- fluidPage(
             column(
               2,
               align = "center",
-              shiny::HTML("<h3 class = 'AndDesktop'><br/>&</h3>"),
+              shiny::HTML("<h3 class = 'AndDesktop'><br/><br/>&</h3>"),
               shiny::HTML("<h3 class = 'AndMobile'>&</h3>")
             ),
             column(
