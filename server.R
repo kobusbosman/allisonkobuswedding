@@ -121,6 +121,7 @@ server <- function(input, output, session) {
       column(
         12,
         align="center",
+        style = "margin-bottom:50px;",
         do.call(
           div,
           lapply(

@@ -97,6 +97,7 @@ ui <- fluidPage(
                 column(
                   6,
                   align = "center",
+                  style = "margin-bottom:50px;",
                   fluidRow(
                     column(
                       6,
@@ -173,6 +174,7 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
+                  style = "margin-bottom:50px;",
                   h1("Saturday, October 21, 2023", style = "margin-top: 75px"),
                   h3("Beer Festival", style = "margin-top: 25px"),
                   p("11.00 AM - 4.00 PM"),
@@ -269,6 +271,7 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
+                  style = "margin-bottom:50px;",
                   actionButton(
                     inputId = "submit",
                     label = "Send to Allison & Kobus",
@@ -292,6 +295,7 @@ ui <- fluidPage(
                 column(
                   12,
                   align = "center",
+                  style = "margin-bottom:50px;",
                   icon("plane-arrival", "fa-3x", style = "margin-top: 25px"),
                   h1("Travel"),
                   h3("Washington Dulles International Airport (IAD)", style = "margin-top: 25px"),
@@ -319,6 +323,7 @@ ui <- fluidPage(
                     column(
                       8,
                       align = "center",
+                      style = "margin-bottom:50px;",
                       p(
                         "For your convenience, a block of rooms has been set aside at Hampton Inn & Suites in Charles Town, West Virginia. ",
                         "Reservations within the block may be made by phone or online: ",
@@ -416,6 +421,7 @@ ui <- fluidPage(
             column(
               4,
               align = "center",
+              style = "margin-bottom:50px;",
               h1("Washington", style = "margin-top:75px"),
               img(src = "mall.jpg", align = "center", width = "300px", style = "margin-top:25px;"),
               fluidRow(
@@ -500,7 +506,7 @@ ui <- fluidPage(
             column(
               3,
               align = "center",
-              style = "margin-bottom:35px",
+              style = "margin-bottom:50px;",
               h4("I-76 Entertainment", style = "margin-top:25px; margin-bottom:25px"),
               div(
                 img(src = "i76highway.png", align = "center", width = "200px"),
@@ -519,6 +525,7 @@ ui <- fluidPage(
             column(
               6,
               align = "center",
+              style = "margin-bottom:50px;",
               fluidRow(
                 column(
                   12,
