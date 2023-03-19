@@ -243,7 +243,7 @@ ui <- fluidPage(
                   style = "margin-top: 25px;",
                   radioButtons(
                     inputId = "rsvp",
-                    label = "Are you attending the wedding?",
+                    label = "Will you attend the wedding?",
                     choices = c("Yes", "No"),
                     inline = TRUE
                   )
