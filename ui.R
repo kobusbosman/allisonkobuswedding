@@ -244,7 +244,8 @@ ui <- fluidPage(
                   radioButtons(
                     inputId = "rsvp",
                     label = "Will you attend the wedding?",
-                    choices = c("Yes", "No"),
+                    choiceNames = c("Happily accept", "Regretfully decline"),
+                    choiceValues = c("Yes", "No"),
                     inline = TRUE
                   )
                 )
