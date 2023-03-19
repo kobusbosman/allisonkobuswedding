@@ -23,10 +23,8 @@ server <- function(input, output, session) {
           style = "text-align:justify",
           HTML(
             paste(
-              glue::glue("The RSVP for {input$firstname} {input$lastname} "),
-              "has been saved. You can now add additional RSVPs of your party. ",
-              "You can fill in this form again at a later time, ",
-              "we'll just look at your last entry."
+              glue::glue("The attendance for {input$firstname} {input$lastname} "),
+              "has been saved. You can now add additional members of your family."
             )
           )
         )
