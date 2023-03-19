@@ -48,7 +48,7 @@ ui <- fluidPage(
               12,
               align = "center",
               h3("October 20, 2023", style = "margin-top: 25px"),
-              h6("Bluemont, VA", style = "margin-top: 25px"),
+              h6("Bluemont, Virginia, USA", style = "margin-top: 25px"),
             )
           ),
           fluidRow(
