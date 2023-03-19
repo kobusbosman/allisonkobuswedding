@@ -256,7 +256,7 @@ ui <- fluidPage(
                   style = "margin-top: 25px;",
                   textInput(
                     inputId = "song",
-                    label = "Do you have a favorite song you would like to be played?"
+                    label = "What song would bring you to the dance floor?"
                   )
                 )
               ),
