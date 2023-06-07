@@ -5,15 +5,9 @@ server <- function(input, output, session) {
   client_time <- reactive(lubridate::as_datetime(as.numeric(input$client_time) / 1000))
   time_zone_offset <- reactive(-(as.numeric(input$client_time_zone_offset)/60))
   
-  r_global <- reactiveValues()
-  
-  temp_dir <- tempdir()
-  
-  googledrive::drive_download("allisonkobusguests", path = glue::glue(temp_dir, "/allisonkobusguests.csv"), overwrite = TRUE)
-  data_guests <- read_csv(glue::glue(temp_dir, "/allisonkobusguests.csv"), 
-                          locale = locale(decimal_mark = ","),
-                          col_types = cols(.default = col_character()))
-  r_global$data_guests <- data_guests
+  observe({
+    print(input$navtabs)
+  })
   
   observeEvent(input$submit, {
     showModal(
@@ -31,7 +25,14 @@ server <- function(input, output, session) {
       )
     )
     
-    r_global$data_guests <- r_global$data_guests %>% bind_rows(
+    temp_dir <- tempdir()
+    
+    googledrive::drive_download("allisonkobusguests", path = glue::glue(temp_dir, "/allisonkobusguests.csv"), overwrite = TRUE)
+    data_guests <- read_csv(glue::glue(temp_dir, "/allisonkobusguests.csv"), 
+                            locale = locale(decimal_mark = ","),
+                            col_types = cols(.default = col_character()))
+    
+    data_guests <- data_guests %>% bind_rows(
       tibble(
         firstname = input$firstname,
         lastname = input$lastname,
@@ -43,7 +44,7 @@ server <- function(input, output, session) {
       )
     )
 
-    readr::write_csv(r_global$data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
+    readr::write_csv(data_guests, glue::glue(temp_dir, "/new_data_guests.csv"))
     googledrive::drive_update("allisonkobusguests", glue::glue(temp_dir, "/new_data_guests.csv"))
     
     updateTextInput(inputId = "firstname", value = "")
