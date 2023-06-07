@@ -40,7 +40,7 @@ server <- function(input, output, session) {
         song = input$song,
         remarks = input$remarks,
         datetime = as.character(client_time()),
-        utc = paste0("UTC+", time_zone_offset())
+        utc = paste0("UTC", ifelse(grepl("-", time_zone_offset()), time_zone_offset(), paste0("+", time_zone_offset())))
       )
     )
 

@@ -19,6 +19,7 @@ ui <- fluidPage(
     class = "navbar1",
     navbarPage(
       title = "Allison & Kobus wedding website",
+      id = "navtabs",
       theme = bs_theme(
         bootswatch = "lux"
       ),
