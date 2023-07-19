@@ -210,7 +210,7 @@ ui <- fluidPage(
                   12,
                   align = "center",
                   p("Thanks for letting us know if you're joining!"),
-                  p("Please respond before July 21st."),
+                  p("Please respond before August 21st."),
                   p("Submit one form per individual:")
                 )
               ),
