@@ -571,10 +571,11 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.14.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "30e5eba91b67f7f4d75d31de14bbfbdc"
+      "Version": "1.0.3",
+      "OS_type": NA,
+      "NeedsCompilation": "no",
+      "Repository": "https://cloud.r-project.org",
+      "Source": "Repository"
     },
     "rlang": {
       "Package": "rlang",
