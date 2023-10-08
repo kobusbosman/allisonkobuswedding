@@ -141,7 +141,7 @@ ui <- fluidPage(
                   align = "center",
                   h1("Thursday, October 19, 2023", style = "margin-top: 75px"),
                   h3("Hiking", style = "margin-top: 25px"),
-                  p("2.00 PM"),
+                  p("1.00 PM"),
                   p("Bear Chase Brewing Company", style = "margin-top: 25px"),
                   p(a(href = "https://www.google.com/maps/place/bear+chase+brewing+company/@39.1106956,-77.8458916,15z/data=!4m2!3m1!1s0x0:0x42b23afb12ce78d2?sa=X&ved=2ahUKEwiDt4-Zr8_9AhW7hP0HHeF_ACEQ_BJ6BQiNARAD", "33665 Bear Chase Ln, Bluemont, VA 20135", .noWS = "outside", target="_blank"), .noWS = c("after-begin", "before-end")),
                   fluidRow(
