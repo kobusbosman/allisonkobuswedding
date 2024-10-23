@@ -705,6 +705,34 @@ ui <- fluidPage(
             column(3)
           )
         )
+      ),
+      tabPanel(
+        title = "Wedding pictures",
+        fluidPage(
+          fluidRow(
+            column(3),
+            column(
+              6,
+              align = "center",
+              style = "margin-bottom:50px;",
+              fluidRow(
+                column(
+                  12,
+                  align = "center",
+                  fluidRow(
+                    column(2),
+                    column(
+                      8,
+                      p("Check out our wedding pictures ", a(href = "https://photos.app.goo.gl/kHFF8fgAhLeUs54X7", "here!", .noWS = "outside", target="_blank"), style = "text-align: justify;")
+                    ),
+                    column(2)
+                  )
+                )
+              )
+            ),
+            column(3)
+          )
+        )
       )
     )
   )
